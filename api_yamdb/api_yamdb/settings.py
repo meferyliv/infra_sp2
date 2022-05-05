@@ -4,7 +4,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
-ENV_PATH = Path.cwd()/'infra'/'.env'
+ENV_PATH = Path.cwd() / 'infra' / '.env'
 load_dotenv(dotenv_path=ENV_PATH)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

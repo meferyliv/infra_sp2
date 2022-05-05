@@ -37,6 +37,7 @@ class TitleAdmin(admin.ModelAdmin):
 
 
 @admin.register(Review)
+@admin.register(Comment)
 class ReviewAdmin(admin.ModelAdmin):
     list_display = (
         'pk',
@@ -45,20 +46,6 @@ class ReviewAdmin(admin.ModelAdmin):
         'score',
         'pub_date',
         'title',
-    )
-    search_fields = ('text',)
-    list_filter = ('author',)
-    empty_value_display = EMPTY
-
-
-@admin.register(Comment)
-class ReviewAdmin(admin.ModelAdmin):
-    list_display = (
-        'pk',
-        'text',
-        'author',
-        'pub_date',
-        'review',
     )
     search_fields = ('text',)
     list_filter = ('author',)
